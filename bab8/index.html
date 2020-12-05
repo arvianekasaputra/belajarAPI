@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Vue.JS</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div id="app" class="mx-auto bg-light p-3">
+        <ul>
+            <li v-for="(arr, index) in array"><button @click="hapus(index)">x</button>{{ arr }}</li>
+        </ul>
+        <br><br>
+
+        <input type="text" v-model="isi">
+        <button @click="tambah">Tambah Data</button>
+        <br><br>
+
+        <h3>List Motor</h3>
+        <ul>
+            <li v-for="arr2 in array2">
+                merknya : {{ arr2.merk }} <br>
+                tipenya : {{ arr2.tipe }}
+            </li>
+        </ul>
+        <br><br>
+
+        <h3>List Motor Manual</h3>
+        <ul>
+            <li v-for="arr3 in motorManual" v-text="arr3.tipe"></li>
+        </ul>
+        <br><br>
+
+        <h3>List Motor Matic</h3>
+        <ul>
+            <li v-for="arr4 in motorMatic" v-text="arr4.tipe"></li>
+        </ul>
+        <br><br>
+
+        <h3>Trik Array</h3>
+        <b v-for="x in 10" v-if="x!=3">{{ x }} </b>
+        <br><br>
+
+        <h3>Search Array</h3>
+        <input type="text" v-model="cari" placeholder="cari berdasarkan merk">
+        <ul v-for="arr5 in filterMerk">
+            <li>
+                merknya : {{ arr5.merk }} <br>
+                tipenya : {{ arr5.tipe }}
+            </li>
+        </ul>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="apps.js"></script>
+</body>
+</html>

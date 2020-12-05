@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Vue.JS</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div id="app">
+        <button @click="pesan='Belajar penggunaan event click'">Klik untuk melihat pesan</button>
+        <p>{{ pesan }}</p>
+        <br><br>
+
+        <button @click="pesan2">Klik untuk melihat pesan2</button>
+        <br><br>
+
+        <button @click="pesan3('Belajar penggunaan event click+method(2)')">Klik untuk melihat pesan3</button>
+        <br><br>
+
+        <input type="text" @keyup.enter="enter" @keyup.space="space" @keyup.esc="esc" @keyup.up="up" @keyup.down="down" 
+                            @keyup.right="right" @keyup.left="left" @keyup.ctrl.88="pesan4" v-on:click.left="mouseleft">
+        <p>{{ print }}</p>
+        <br><br>
+
+        <button @click="tampak=!tampak">Toogle</button>
+        <b v-show="tampak">Tulisan yang ditampilkan</b>
+        <br><br>
+
+        <button :key="tampak2" @click="tampak2=!tampak2">{{ tampak2? 'save' : 'edit'}}</button>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="apps.js"></script>
+</body>
+</html>

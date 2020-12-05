@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Vue.JS</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div id="app" class="mx-auto bg-light p-3">
+        <tebal></tebal><br>
+        <tebal></tebal><br>
+        <tebal2>by Arvian Eka Saputra</tebal2><br><br>
+        
+        <multi></multi><br><br>
+        
+        <daftar></daftar><br><br>
+
+        <karya judul="Aku" isi="Aku adalah seorang manusia ciptaan Tuhan..."></karya>
+        <karya judul="Kamu" isi="Kamu pun adalah seorang manusia ciptaan Tuhan..."></karya>
+        <karya judul="Kita" isi="Kita samasama seorang manusia ciptaan Tuhan..."></karya><br><br>
+
+        <tes :nilai='pesan' :nilai2='pesan2'></tes><br><br>
+
+        <nama @applied="validasi"></nama>
+        <b v-if="valid">Anda telah memasukkan nama</b><br><br>
+
+        <kendaraans></kendaraans>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="apps.js"></script>
+</body>
+</html>

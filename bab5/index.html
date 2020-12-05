@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Vue.JS</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div id="app" class="mx-auto bg-light p-3">
+        <h1>Text Box</h1>
+        <input type="text" v-model="pesan" placeholder="ketik pesan disini">
+        <br>Pesan anda adalah:
+        <p>{{ pesan }}</p>
+        <br><br>
+
+        <h1>Text Area</h1>
+        <textarea v-model="pesan2" placeholder="ketik pesan disini"></textarea>
+        <br>Pesan Multiline adalah:<br>
+        <p style="white-space: pre-line">{{ pesan2 }}</p>
+        <br><br>
+
+        <h1>Radio</h1>
+        <input type="radio" id="S2" v-model="pilih" value="S2">S2 <br>
+        <input type="radio" id="Menikah" v-model="pilih" value="Menikah">Menikah <br>
+        Anda memilih:
+        <p>{{ pilih }}</p>
+        <br><br>
+
+        <h1>Checkbox</h1>
+        <input type="checkbox" v-model="checklist" value="Sepakbola"><label for="checkbox">Sepakbola</label><br>
+        <input type="checkbox" v-model="checklist" value="Voli"><label for="checkbox">Voli</label><br>
+        <input type="checkbox" v-model="checklist" value="Game"><label for="checkbox">Game</label><br>
+        Anda memilih:
+        <ul>
+            <li v-for="c in checklist">{{ c }}</li>
+        </ul>
+        <br><br>
+
+        <h1>Dropdown</h1>
+        <select v-model="pilih2">
+            <option disabled value="">Pilih Kota Anda</option>
+            <option value="Tengah">Yogyakarta</option>
+            <option value="Utara">Sleman</option>
+            <option value="Selatan">Bantul</option>
+            <option value="Timur">Gunungkidul</option>
+            <option value="Barat">Kulonprogo</option>
+        </select><br>
+        Anda memilih:
+        <p>{{ pilih2 }}</p>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="apps.js"></script>
+</body>
+</html>

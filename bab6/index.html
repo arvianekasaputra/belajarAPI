@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Vue.JS</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        .warna{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <img :src="imageSrc" :style="{width: lebar + 'px'}" :title="pesan"><br>
+        <b :class="rubah" :title="pesan">Antoine Griezmann</b>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="apps.js"></script>
+</body>
+</html>

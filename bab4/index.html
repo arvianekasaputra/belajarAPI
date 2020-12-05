@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Belajar Vue.JS</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div id="app" class="mx-auto bg-light p-3">
+        <h1>dari perhitungan {{ bil1 }} dengan {{ bil2 }}</h1><br/>
+        <button v-on:click='diproses'>proses</button><br>
+        penjumlahan = {{ jumlah }}<br>
+        pengurangan = {{ kurang}}<br>
+        perkalian   = {{ kali }}<br>
+        pembagian   = {{ bagi }}<br>
+
+        <h1>Watcher</h1><br>
+        <input type="password" v-model="isi" placeholder="type password" class="form-control mb-1">
+        <input type="password" v-model="isi2" placeholder="re-type password" class="form-control mb-1">
+        <p v-html="keterangan"></p>
+        <input type="submit" value="Sign Up" v-if=tampil class="btn btn-primary btn-block">
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="apps.js"></script>
+</body>
+</html>
